@@ -1,0 +1,7 @@
+# Git ignore for IC Inquiry Site
+.DS_Store
+node_modules/
+.env
+*.log
+.vscode/
+.accio/

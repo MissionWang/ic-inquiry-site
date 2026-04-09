@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Cart | Review & Submit RFQ | HQB IC Sourcing</title>
+    <meta name="description" content="Review your IC part inquiry list and submit for a professional 1-hour quote from our team in Shenzhen Huaqiangbei.">
+    <meta name="keywords" content="RFQ IC, quote cart, electronics inquiry list, IC price check, submit BOM quote">
+    <link rel="canonical" href="https://hqb-icsourcing.com/quote-cart.html">
+
+    <!-- EmailJS SDK and Configuration (Borrowed from potting machine site) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="config.js"></script>
+    <script src="form-handler.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .tech-mono { font-family: 'Roboto Mono', monospace; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Header (Consistent with other pages) -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="w-10 h-10 bg-blue-600 rounded flex items-center justify-center text-white font-bold text-xl italic">HQB</a>
+                <a href="index.html" class="text-xl font-bold tracking-tight text-slate-800">IC Sourcing</a>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="index.html" class="text-slate-600 hover:text-blue-600">Home</a>
+                <a href="search-results.html" class="text-slate-600 hover:text-blue-600">Product Search</a>
+                <a href="bom-upload.html" class="text-slate-600 hover:text-blue-600">BOM Upload</a>
+                <a href="qc-center.html" class="text-slate-600 hover:text-blue-600">QC Center</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="contact.html" class="bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-slate-800 transition">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16 max-w-4xl">
+        <div class="mb-12">
+            <h1 class="text-3xl font-extrabold mb-2">Review Your Quote Cart</h1>
+            <p class="text-slate-500">You have 3 items in your inquiry list. Complete the details below to receive your fast quote.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Side: List of items -->
+            <div class="lg:col-span-2 space-y-4">
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                    <table class="w-full text-left text-sm whitespace-nowrap">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="px-6 py-4 font-bold text-slate-600 uppercase tracking-wider text-xs">Part Number</th>
+                                <th class="px-6 py-4 font-bold text-slate-600 uppercase tracking-wider text-xs">Quantity</th>
+                                <th class="px-6 py-4 font-bold text-slate-600 uppercase tracking-wider text-xs">Target Price</th>
+                                <th class="px-6 py-4"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr>
+                                <td class="px-6 py-6">
+                                    <div class="tech-mono font-bold text-blue-600">STM32F103C8T6</div>
+                                    <div class="text-[10px] text-slate-400 mt-1 uppercase">STMicroelectronics</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <input type="number" value="1000" class="w-24 rounded border-slate-200 text-sm py-1 px-2 focus:ring-blue-500">
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="flex items-center">
+                                        <span class="text-slate-400 mr-2">$</span>
+                                        <input type="text" placeholder="0.00" class="w-20 rounded border-slate-200 text-sm py-1 px-2 focus:ring-blue-500">
+                                    </div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <button class="text-red-500 hover:text-red-700 transition">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-6">
+                                    <div class="tech-mono font-bold text-blue-600">TL431AIDBZR</div>
+                                    <div class="text-[10px] text-slate-400 mt-1 uppercase">Texas Instruments</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <input type="number" value="5000" class="w-24 rounded border-slate-200 text-sm py-1 px-2 focus:ring-blue-500">
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="flex items-center">
+                                        <span class="text-slate-400 mr-2">$</span>
+                                        <input type="text" placeholder="0.00" class="w-20 rounded border-slate-200 text-sm py-1 px-2 focus:ring-blue-500">
+                                    </div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <button class="text-red-500 hover:text-red-700 transition">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                    <a href="search-results.html" class="flex items-center text-blue-600 hover:underline">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        Continue Searching
+                    </a>
+                    <button class="text-slate-500 hover:text-slate-800 transition">Clear All Items</button>
+                </div>
+            </div>
+
+            <!-- Right Side: Contact & Submit -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-8 sticky top-24">
+                    <h3 class="text-xl font-bold mb-6">Quote Request</h3>
+                    <form id="quoteForm" class="space-y-4">
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase text-slate-500 mb-1">Work Email</label>
+                            <input type="email" name="email" required class="w-full rounded-lg border-slate-200 py-3 text-sm focus:ring-blue-500 focus:border-blue-500" placeholder="email@company.com">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase text-slate-500 mb-1">Urgency</label>
+                            <select name="urgency" class="w-full rounded-lg border-slate-200 py-3 text-sm focus:ring-blue-500 focus:border-blue-500">
+                                <option>Normal (24h)</option>
+                                <option class="text-orange-600 font-bold">Urgent (1h)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase text-slate-500 mb-1">Company / Project</label>
+                            <input type="text" name="company" class="w-full rounded-lg border-slate-200 py-3 text-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Project Name">
+                        </div>
+                        <div class="pt-4">
+                            <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition shadow-xl shadow-blue-500/30">Request Quote Now</button>
+                        </div>
+                        <p class="text-[10px] text-slate-400 text-center mt-4">
+                            Expect a direct response from our specialists in Shenzhen.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 mt-20">
+        <div class="container mx-auto px-4 text-center text-xs">
+            <p>&copy; 2026 HQB IC Sourcing. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

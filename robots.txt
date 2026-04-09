@@ -1,0 +1,8 @@
+# robots.txt for HQB IC Sourcing Portal
+User-agent: *
+Allow: /
+
+Sitemap: https://hqb-icsourcing.com/sitemap.xml
+
+# Crawl-delay for better SEO reliability
+Crawl-delay: 1
