@@ -2,6 +2,7 @@
 
 ## 1. Core Target & Value Proposition
 - **Target**: Foreign SME manufacturers sourcing hard-to-find/obsolete ICs from Huaqiangbei.
+- **Strategic Focus**: **STMicroelectronics (STM32)** and **Texas Instruments (Analog/Power)**. These are our high-authority categories with deepest stock and most competitive pricing.
 - **Value**: Reliable stock (QC verified), 1-hour quotation, no MOQ, BOM optimization service.
 
 ## 2. Page Structure & Essential Fields
