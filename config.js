@@ -1,6 +1,6 @@
 /**
  * IC Inquiry Site Configuration
- * Borrowed and adapted from the High-Precision Potting Machine website.
+ * Borrowed and adapted from the High-Precision Potting Machine website (D:\workspace\inquiry-website).
  * Edit these values to update your contact and email delivery settings.
  */
 const SITE_CONFIG = {
@@ -8,23 +8,29 @@ const SITE_CONFIG = {
   brand: {
     name: 'HQB IC Sourcing',
     fullName: 'HQB IC Sourcing - Professional Electronics Components Partner',
-    domain: 'https://ic.autodispenserpro.com',  // Updated with your actual domain
+    domain: 'https://ic.autodispenserpro.com',  // Your IC site domain
+    mainDomain: 'https://ic.autodispenserpro.com',
     year: 2026
   },
 
-  // EmailJS (form submission - derived from reference site)
+  // EmailJS (form submission - inherited from potting machine site)
   emailjs: {
-    serviceId: 'service_cyr2jg8',       // Replace with your EmailJS Service ID
-    templateId: 'template_fdj773n',      // Replace with your EmailJS Template ID
-    publicKey: 'loeH7DBCwJm48R2kt'      // Replace with your EmailJS Public Key
+    serviceId: 'service_cyr2jg8',       // Active Service ID
+    templateId: 'template_fdj773n',      // Active Template ID
+    publicKey: 'loeH7DBCwJm48R2kt'      // Active Public Key
   },
 
-  // Contact
+  // Contact (Inherited from potting machine site)
   contact: {
-    email: 'info@mail.hongjunshuke.com', // Replace with your receiving email
-    whatsapp: '+86-123-4567-8901',
-    whatsappRaw: '8612345678901',        // No spaces, no +
-    wechat: 'HQB-Sourcing',
+    email: 'info@mail.hongjunshuke.com',
+    phone: '+86 15346172906',
+    phoneRaw: '+86 15346172906',           // for tel: href
+    whatsapp: '+86 15346172906',
+    whatsappRaw: '8615346172906',            // for wa.me/ link (no spaces, no +)
+    whatsappMessage: "Hi, I'm interested in sourcing IC components from Huaqiangbei.",
+    wechat: '13265409026',
+    telegram: '+86 15346172906',            // Telegram phone number
+    telegramRaw: '+8615346172906',           // for t.me/ link (must include +)
     address: 'Huaqiangbei, Futian District, Shenzhen, China'
   }
 };
