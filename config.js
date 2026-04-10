@@ -8,7 +8,7 @@ const SITE_CONFIG = {
   brand: {
     name: 'HQB IC Sourcing',
     fullName: 'HQB IC Sourcing - Professional Electronics Components Partner',
-    domain: 'https://hqb-icsourcing.com',  // Update with your actual domain
+    domain: 'https://ic.autodispenserpro.com',  // Updated with your actual domain
     year: 2026
   },
 
